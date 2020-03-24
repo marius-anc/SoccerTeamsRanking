@@ -14,5 +14,15 @@ namespace SoccerTeamsRanking.Tests
             Assert.Equal<SoccerTeam>(teams, teamsSorted);
 
         }
+
+        [Fact]
+        public void BubbleSortsWorksWithAlreadySortedArray()
+        {
+            SoccerTeam[] teams = { new SoccerTeam("FCSB", 33), new SoccerTeam("CS Gaz Metan Medias", 29), new SoccerTeam("Sepsi OSK ", 28) };
+            SoccerTeam[] teamsSorted = { new SoccerTeam("FCSB", 33), new SoccerTeam("CS Gaz Metan Medias", 29), new SoccerTeam("Sepsi OSK ", 28) };
+            Program.BubbleSort(teams);
+            Assert.Equal<SoccerTeam>(teams, teamsSorted);
+
+        }
     }
 }
